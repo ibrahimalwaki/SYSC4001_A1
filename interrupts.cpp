@@ -72,7 +72,7 @@
      write_output(execution);
      return 0;
  }
- 
+ //command kine to run the code 
  //bash build.sh
  //./bin/interrupts trace.txt vector_table.txt device_table.txt
  //head -20 execution.txt
