@@ -12,16 +12,16 @@
      auto [vectors, delays] = parse_args(argc, argv);
      std::ifstream input_file(argv[1]);
  
-     std::string trace;      //!< one line from trace file
-     std::string execution;  //!< the whole output
+     std::string trace;      //!< string to store single line of trace file
+     std::string execution;  //!< string to accumulate the execution output
      int current_time = 0;   //!< simulation clock
  
      // constants
      const int KERNEL_SWITCH_MS = 1;
-     int CONTEXT_SAVE_MS = 10;     // later: vary 10/20/30
+     int CONTEXT_SAVE_MS = 10;     //vary 10/20/30
      const int VECTOR_LOOKUP_MS = 1;
      const int LOAD_ISR_ADDR_MS = 1;
-     const int DRIVER_ACTIVITY_MS = 40; // later: vary 40..200
+     const int DRIVER_ACTIVITY_MS = 40; //vary 40..200
      const int IRET_MS = 1;
  
      // helper: append one line
@@ -45,7 +45,7 @@
          log(IRET_MS, "IRET");
      };
  
-     // go through each line of the trace
+     //parse each line of the input trace file
      while (std::getline(input_file, trace)) {
          auto [activity, val] = parse_trace(trace);
  
@@ -65,7 +65,6 @@
              run_interrupt(dev, 1); // typically 1 activity for completion
          }
          else {
-             // ignore unknown activity
          }
      }
  
