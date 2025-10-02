@@ -14,6 +14,8 @@
  
      std::string trace;      //!< string to store single line of trace file
      std::string execution;  //!< string to accumulate the execution output
+  
+     //added code
      int current_time = 0;   //!< simulation clock
  
      // constants
@@ -41,13 +43,15 @@
          for (int i = 0; i < activities; i++) {
              log(DRIVER_ACTIVITY_MS, "call device driver (activity " + std::to_string(i+1) + ")");
          }
- 
          log(IRET_MS, "IRET");
      };
- 
+     //end of the added code 
+  
      //parse each line of the input trace file
      while (std::getline(input_file, trace)) {
          auto [activity, val] = parse_trace(trace);
+
+      // added code
  
          if (activity == "CPU") {
              log(val, "CPU burst");
@@ -67,7 +71,7 @@
          else {
          }
      }
- 
+     // end of added code 
      input_file.close();
      write_output(execution);
      return 0;
