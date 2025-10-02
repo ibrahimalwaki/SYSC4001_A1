@@ -111,8 +111,10 @@ std::pair<std::string, int> intr_boilerplate(int current_time, int intr_num, int
     execution += std::to_string(current_time) + ", " + std::to_string(context_save_time) + ", context saved\n";
     current_time += context_save_time;
     
+    // char vector_address_c[10];
+    // sprintf(vector_address_c, "0x%04X", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
     char vector_address_c[10];
-    sprintf(vector_address_c, "0x%04X", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
+    snprintf(vector_address_c, sizeof(vector_address_c), "0x%04X",(ADDR_BASE + (intr_num * VECTOR_SIZE)));
     std::string vector_address(vector_address_c);
 
     execution += std::to_string(current_time) + ", " + std::to_string(1) + ", find vector " + std::to_string(intr_num) 
