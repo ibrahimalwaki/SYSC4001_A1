@@ -7,20 +7,27 @@
 103, 40, call device driver (activity 2)
 143, 40, call device driver (activity 3)
 183, 1, IRET
-184, 100, CPU burst
-284, 1, switch to kernel mode
-285, 10, context saved
-295, 1, find vector 12 in memory position 0x0018
-296, 1, load address 0X03B9 into the PC
-297, 40, call device driver (activity 1)
-337, 40, call device driver (activity 2)
-377, 40, call device driver (activity 3)
-417, 1, IRET
-418, 152, end of I/O 7: interrupt
-418, 1, switch to kernel mode
-419, 10, context saved
-429, 1, find vector 7 in memory position 0x000E
-430, 1, load address 0X00BD into the PC
-431, 40, call device driver (activity 1)
-471, 1, IRET
-472, 20, CPU burst
+184, 152, end of I/O 7: interrupt
+336, 1, switch to kernel mode
+337, 10, context saved
+347, 1, find vector 7 in memory position 0x000E
+348, 1, load address 0X00BD into the PC
+349, 40, call device driver (activity 1)
+389, 1, IRET
+390, 100, CPU burst
+490, 1, switch to kernel mode
+491, 10, context saved
+501, 1, find vector 12 in memory position 0x0018
+502, 1, load address 0X03B9 into the PC
+503, 40, call device driver (activity 1)
+543, 40, call device driver (activity 2)
+583, 40, call device driver (activity 3)
+623, 1, IRET
+624, 145, end of I/O 12: interrupt
+769, 1, switch to kernel mode
+770, 10, context saved
+780, 1, find vector 12 in memory position 0x0018
+781, 1, load address 0X03B9 into the PC
+782, 40, call device driver (activity 1)
+822, 1, IRET
+823, 20, CPU burst
