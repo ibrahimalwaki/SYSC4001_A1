@@ -1,0 +1,18 @@
+0, 200, CPU
+200, 1, switch to kernel mode
+201, 10, context saved
+211, 1, find vector 7 in memory position 0x000E
+212, 1, load address 0X00BD into the PC
+213, 76, run device driver (part 1)
+289, 76, run device driver (part 2)
+365, 1, IRET
+366, 1, switch to user mode
+367, 150, CPU
+517, 1, switch to kernal mode
+518, 10, context save
+528, 1, find vector 7
+529, 1, load address 0X00BD into PC
+530, 40, ENDIO: run the ISR
+570, 1, IRET
+571, 1, switch to user mode
+572, 80, CPU
