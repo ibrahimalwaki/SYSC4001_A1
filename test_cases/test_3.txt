@@ -1,0 +1,4 @@
+0, 10, CPU
+10, 0, SYSCALL
+60, 0, END_IO
+70, 10, CPU
