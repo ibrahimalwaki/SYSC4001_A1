@@ -1,8 +1,6 @@
 /**
  *
  * @file interrupts.cpp
- * @author Sasisekhar Govind
- * 
  * @author Ibrahim Alwaki 101235067
  * @author Sahand Maaroof 101311395
  *
